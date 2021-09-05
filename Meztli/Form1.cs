@@ -25,70 +25,27 @@ namespace Meztli
                 lblWarning.Text = Resources.SELECCIONELOSCAMPOS;
                 return;
             }
-            pbQRCode.Image = generateImage(Resources.GENERATEFORPREV);
 
-            Bitmap FinalImage = generateImage(Resources.GENERATEFORSAVE);
-
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.FileName = Resources.FILENAME;
-            FinalImage.Save(dialog.FileName, ImageFormat.Bmp);
-        }
-        
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (pbQRCode.Image == null)
+            int initialSerial = Convert.ToInt32(serialFrom.Value);
+            int finalSerial = Convert.ToInt32(serialTo.Value);
+            for (int i = initialSerial; i <= finalSerial; i++)
             {
-                lblWarning.Text = Resources.GENEREELCODIGOPORFAVOR;
-                return;
-            }
+                Bitmap FinalImage = generateImage(Resources.GENERATEFORSAVE, i.ToString());
 
-            Bitmap FinalImage = generateImage(Resources.GENERATEFORSAVE);
-
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.FileName = Resources.FILENAME;
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                FinalImage.Save(dialog.FileName, ImageFormat.Bmp);
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.FileName = i.ToString();
+                FinalImage.Save(dialog.FileName + ".bmp");
             }
         }
 
-        private Bitmap generateImage(string type)
+        private Bitmap generateImage(string type, string serialNumber)
         {
             CollectionHandler ci = new CollectionHandler();
-            Information info = new Information(cmbVendorCode.Text, dtpDate.Value, cmbSerialNumber.Text, cmbShift.Text);
+            Information info = new Information(cmbVendorCode.Text, dtpDate.Value, serialNumber, cmbShift.Text);
             Part part = ci.FindPart(cmbPart.Text);
             Drawer dr = new Drawer();
 
             return dr.GenerateTag(info, part);
-        }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            if (pbQRCode.Image == null)
-            {
-                lblWarning.Text = Resources.GENEREELCODIGOPORFAVOR;
-                return;
-            }
-
-            PrintDocument pd = new PrintDocument();
-            pd.PrintPage += new PrintPageEventHandler(PrintImage);
-            PrintDialog pdi = new PrintDialog();
-            pdi.Document = pd;
-            if (pdi.ShowDialog() == DialogResult.OK)
-            {
-                pd.Print();
-            }
-            else
-            {
-                MessageBox.Show(Resources.IMPRESIONCANCELADA);
-            }
-        }
-
-        private void PrintImage(object sender, PrintPageEventArgs e)
-        {
-            Image image = generateImage(Resources.GENERATEFORSAVE);
-
-            e.Graphics.DrawImage(image,0,10);
         }
     }
 }
