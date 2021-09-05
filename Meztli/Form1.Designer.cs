@@ -34,75 +34,70 @@
             this.lblVendor = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
             this.lblSerial = new System.Windows.Forms.Label();
-            this.lblCadena = new System.Windows.Forms.Label();
             this.cmbPart = new System.Windows.Forms.ComboBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.cmbVendorCode = new System.Windows.Forms.ComboBox();
             this.cmbShift = new System.Windows.Forms.ComboBox();
             this.cmbSerialNumber = new System.Windows.Forms.ComboBox();
-            this.txtFinalCode = new System.Windows.Forms.TextBox();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.pbQRCode = new System.Windows.Forms.PictureBox();
             this.lblWarning = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
+            this.lblCadena = new System.Windows.Forms.Label();
+            this.txtFinalCode = new System.Windows.Forms.TextBox();
             this.btnGuardarTest = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.pbQRCode = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).BeginInit();
             this.SuspendLayout();
             // 
             // lblParte
             // 
             this.lblParte.AutoSize = true;
-            this.lblParte.Location = new System.Drawing.Point(48, 50);
+            this.lblParte.Location = new System.Drawing.Point(72, 77);
+            this.lblParte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblParte.Name = "lblParte";
-            this.lblParte.Size = new System.Drawing.Size(35, 13);
+            this.lblParte.Size = new System.Drawing.Size(51, 20);
             this.lblParte.TabIndex = 0;
             this.lblParte.Text = "Parte:";
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(44, 86);
+            this.lblFecha.Location = new System.Drawing.Point(66, 132);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(40, 13);
+            this.lblFecha.Size = new System.Drawing.Size(58, 20);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "Fecha:";
             // 
             // lblVendor
             // 
             this.lblVendor.AutoSize = true;
-            this.lblVendor.Location = new System.Drawing.Point(12, 119);
+            this.lblVendor.Location = new System.Drawing.Point(18, 183);
+            this.lblVendor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVendor.Name = "lblVendor";
-            this.lblVendor.Size = new System.Drawing.Size(72, 13);
+            this.lblVendor.Size = new System.Drawing.Size(107, 20);
             this.lblVendor.TabIndex = 2;
             this.lblVendor.Text = "Vendor Code:";
             // 
             // lblTurno
             // 
             this.lblTurno.AutoSize = true;
-            this.lblTurno.Location = new System.Drawing.Point(46, 154);
+            this.lblTurno.Location = new System.Drawing.Point(69, 237);
+            this.lblTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(38, 13);
+            this.lblTurno.Size = new System.Drawing.Size(54, 20);
             this.lblTurno.TabIndex = 3;
             this.lblTurno.Text = "Turno:";
             // 
             // lblSerial
             // 
             this.lblSerial.AutoSize = true;
-            this.lblSerial.Location = new System.Drawing.Point(48, 189);
+            this.lblSerial.Location = new System.Drawing.Point(72, 291);
+            this.lblSerial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSerial.Name = "lblSerial";
-            this.lblSerial.Size = new System.Drawing.Size(36, 13);
+            this.lblSerial.Size = new System.Drawing.Size(53, 20);
             this.lblSerial.TabIndex = 4;
             this.lblSerial.Text = "Serial:";
-            // 
-            // lblCadena
-            // 
-            this.lblCadena.AutoSize = true;
-            this.lblCadena.Location = new System.Drawing.Point(36, 565);
-            this.lblCadena.Name = "lblCadena";
-            this.lblCadena.Size = new System.Drawing.Size(47, 13);
-            this.lblCadena.TabIndex = 5;
-            this.lblCadena.Text = "Cadena:";
-            this.lblCadena.Visible = false;
             // 
             // cmbPart
             // 
@@ -118,16 +113,18 @@
             "5-2 RESERVOIR TANK",
             "6 SHROUD ASSY-COOL\'G FAN",
             "7 SHROUD ASSY-COOL\'G FAN"});
-            this.cmbPart.Location = new System.Drawing.Point(89, 47);
+            this.cmbPart.Location = new System.Drawing.Point(134, 72);
+            this.cmbPart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPart.Name = "cmbPart";
-            this.cmbPart.Size = new System.Drawing.Size(270, 21);
+            this.cmbPart.Size = new System.Drawing.Size(403, 28);
             this.cmbPart.TabIndex = 6;
             // 
             // dtpDate
             // 
-            this.dtpDate.Location = new System.Drawing.Point(90, 80);
+            this.dtpDate.Location = new System.Drawing.Point(135, 123);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(269, 20);
+            this.dtpDate.Size = new System.Drawing.Size(402, 26);
             this.dtpDate.TabIndex = 7;
             // 
             // cmbVendorCode
@@ -136,9 +133,10 @@
             this.cmbVendorCode.FormattingEnabled = true;
             this.cmbVendorCode.Items.AddRange(new object[] {
             "TSPL"});
-            this.cmbVendorCode.Location = new System.Drawing.Point(89, 116);
+            this.cmbVendorCode.Location = new System.Drawing.Point(134, 178);
+            this.cmbVendorCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbVendorCode.Name = "cmbVendorCode";
-            this.cmbVendorCode.Size = new System.Drawing.Size(270, 21);
+            this.cmbVendorCode.Size = new System.Drawing.Size(403, 28);
             this.cmbVendorCode.TabIndex = 8;
             // 
             // cmbShift
@@ -148,9 +146,10 @@
             this.cmbShift.Items.AddRange(new object[] {
             "Dia",
             "Noche"});
-            this.cmbShift.Location = new System.Drawing.Point(90, 151);
+            this.cmbShift.Location = new System.Drawing.Point(135, 232);
+            this.cmbShift.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbShift.Name = "cmbShift";
-            this.cmbShift.Size = new System.Drawing.Size(177, 21);
+            this.cmbShift.Size = new System.Drawing.Size(264, 28);
             this.cmbShift.TabIndex = 9;
             // 
             // cmbSerialNumber
@@ -159,71 +158,89 @@
             this.cmbSerialNumber.FormattingEnabled = true;
             this.cmbSerialNumber.Items.AddRange(new object[] {
             "151208"});
-            this.cmbSerialNumber.Location = new System.Drawing.Point(90, 186);
+            this.cmbSerialNumber.Location = new System.Drawing.Point(135, 286);
+            this.cmbSerialNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSerialNumber.Name = "cmbSerialNumber";
-            this.cmbSerialNumber.Size = new System.Drawing.Size(269, 21);
+            this.cmbSerialNumber.Size = new System.Drawing.Size(402, 28);
             this.cmbSerialNumber.TabIndex = 10;
-            // 
-            // txtFinalCode
-            // 
-            this.txtFinalCode.Location = new System.Drawing.Point(89, 562);
-            this.txtFinalCode.Name = "txtFinalCode";
-            this.txtFinalCode.Size = new System.Drawing.Size(269, 20);
-            this.txtFinalCode.TabIndex = 11;
-            this.txtFinalCode.Visible = false;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(89, 219);
+            this.btnGenerate.Location = new System.Drawing.Point(134, 337);
+            this.btnGenerate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(214, 47);
+            this.btnGenerate.Size = new System.Drawing.Size(321, 72);
             this.btnGenerate.TabIndex = 12;
             this.btnGenerate.Text = "Generar";
             this.btnGenerate.UseVisualStyleBackColor = true;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // pbQRCode
-            // 
-            this.pbQRCode.Location = new System.Drawing.Point(12, 308);
-            this.pbQRCode.Name = "pbQRCode";
-            this.pbQRCode.Size = new System.Drawing.Size(409, 214);
-            this.pbQRCode.TabIndex = 13;
-            this.pbQRCode.TabStop = false;
-            // 
             // lblWarning
             // 
             this.lblWarning.AutoSize = true;
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblWarning.Location = new System.Drawing.Point(124, 279);
+            this.lblWarning.Location = new System.Drawing.Point(186, 429);
+            this.lblWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblWarning.Size = new System.Drawing.Size(0, 20);
             this.lblWarning.TabIndex = 14;
             // 
-            // btnPrint
+            // lblCadena
             // 
-            this.btnPrint.Location = new System.Drawing.Point(194, 528);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 23);
-            this.btnPrint.TabIndex = 15;
-            this.btnPrint.Text = "Imprimir";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.lblCadena.AutoSize = true;
+            this.lblCadena.Location = new System.Drawing.Point(54, 869);
+            this.lblCadena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCadena.Name = "lblCadena";
+            this.lblCadena.Size = new System.Drawing.Size(69, 20);
+            this.lblCadena.TabIndex = 5;
+            this.lblCadena.Text = "Cadena:";
+            this.lblCadena.Visible = false;
+            // 
+            // txtFinalCode
+            // 
+            this.txtFinalCode.Location = new System.Drawing.Point(134, 865);
+            this.txtFinalCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFinalCode.Name = "txtFinalCode";
+            this.txtFinalCode.Size = new System.Drawing.Size(402, 26);
+            this.txtFinalCode.TabIndex = 11;
+            this.txtFinalCode.Visible = false;
             // 
             // btnGuardarTest
             // 
-            this.btnGuardarTest.Location = new System.Drawing.Point(113, 528);
+            this.btnGuardarTest.Location = new System.Drawing.Point(170, 812);
+            this.btnGuardarTest.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarTest.Name = "btnGuardarTest";
-            this.btnGuardarTest.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarTest.Size = new System.Drawing.Size(112, 35);
             this.btnGuardarTest.TabIndex = 17;
             this.btnGuardarTest.Text = "Guardar";
             this.btnGuardarTest.UseVisualStyleBackColor = true;
             this.btnGuardarTest.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(291, 812);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(112, 35);
+            this.btnPrint.TabIndex = 15;
+            this.btnPrint.Text = "Imprimir";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // pbQRCode
+            // 
+            this.pbQRCode.Location = new System.Drawing.Point(18, 474);
+            this.pbQRCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbQRCode.Name = "pbQRCode";
+            this.pbQRCode.Size = new System.Drawing.Size(614, 329);
+            this.pbQRCode.TabIndex = 13;
+            this.pbQRCode.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 594);
+            this.ClientSize = new System.Drawing.Size(650, 914);
             this.Controls.Add(this.btnGuardarTest);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.lblWarning);
@@ -243,6 +260,7 @@
             this.Controls.Add(this.lblParte);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Meztli 1.2";
@@ -259,18 +277,18 @@
         private System.Windows.Forms.Label lblVendor;
         private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.Label lblSerial;
-        private System.Windows.Forms.Label lblCadena;
         private System.Windows.Forms.ComboBox cmbPart;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.ComboBox cmbVendorCode;
         private System.Windows.Forms.ComboBox cmbShift;
         private System.Windows.Forms.ComboBox cmbSerialNumber;
-        private System.Windows.Forms.TextBox txtFinalCode;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.PictureBox pbQRCode;
         private System.Windows.Forms.Label lblWarning;
-        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label lblCadena;
+        private System.Windows.Forms.TextBox txtFinalCode;
         private System.Windows.Forms.Button btnGuardarTest;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.PictureBox pbQRCode;
     }
 }
 

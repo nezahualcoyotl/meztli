@@ -26,6 +26,12 @@ namespace Meztli
                 return;
             }
             pbQRCode.Image = generateImage(Resources.GENERATEFORPREV);
+
+            Bitmap FinalImage = generateImage(Resources.GENERATEFORSAVE);
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.FileName = Resources.FILENAME;
+            FinalImage.Save(dialog.FileName, ImageFormat.Bmp);
         }
         
         private void btnSave_Click(object sender, EventArgs e)
