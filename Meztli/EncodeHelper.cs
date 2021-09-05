@@ -55,8 +55,6 @@ namespace Meztli
                 /*4M Info*/         Resources._4M_S1 + info.shift + Resources._4M_1A,
                 /*Serial Num*/      info.serialNumber,
                 /*Devide*/          Resources.DEVIDE,
-                /*Separate Code*/   "1A" + string.Empty,
-                /*Devide*/          Resources.DEVIDE,
                 /*ISIR/4M*/         "M" + Resources._4M_Y,
                 /*Devide*/          Resources.DEVIDE,
                 /*Vendor space*/    "C" + string.Empty,
