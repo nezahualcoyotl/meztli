@@ -3,14 +3,32 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Drawing.Imaging;
+using System.Data.OleDb;
 
 namespace Meztli
 {
     public partial class Form1 : Form
     {
+        OleDbConnection con;
+        OleDbCommand cmd;
+        OleDbDataReader dr;
+
         public Form1()
         {
             InitializeComponent();
+
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Part";
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cmbPart.Items.Add(dr["display_name"]);
+            }
+            con.Close();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)

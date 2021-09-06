@@ -102,16 +102,6 @@
             // 
             this.cmbPart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPart.FormattingEnabled = true;
-            this.cmbPart.Items.AddRange(new object[] {
-            "1 DUCT ASSY-(A)FLOOR SHOWER",
-            "2 DUCT ASSY-FLOOR SHOWER",
-            "3 COVER-HTR CORE",
-            "4 FAN-COOL\'G",
-            "5 SHROUD ASSY-COOL\'G FAN",
-            "5-1 SHROUD COOL\'G FAN",
-            "5-2 RESERVOIR TANK",
-            "6 SHROUD ASSY-COOL\'G FAN",
-            "7 SHROUD ASSY-COOL\'G FAN"});
             this.cmbPart.Location = new System.Drawing.Point(89, 47);
             this.cmbPart.Name = "cmbPart";
             this.cmbPart.Size = new System.Drawing.Size(270, 21);
