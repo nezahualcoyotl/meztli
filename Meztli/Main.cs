@@ -16,19 +16,7 @@ namespace Meztli
         public Main()
         {
             InitializeComponent();
-
-            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
-            cmd = new OleDbCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "SELECT * FROM Part";
-            dr = cmd.ExecuteReader();
-
-            while (dr.Read())
-            {
-                cmbPart.Items.Add(dr["display_name"]);
-            }
-            con.Close();
+            LoadParts();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -69,7 +57,33 @@ namespace Meztli
         private void btnPartsForm_Click(object sender, EventArgs e)
         {
             Parts partsForm = new Parts();
+            partsForm.FormClosing += delegate { this.GoBackToMain(); };
             partsForm.Show();
+            this.Hide();
+        }
+
+        private void GoBackToMain()
+        {
+            this.Show();
+            LoadParts();
+        }
+
+        private void LoadParts()
+        {
+            cmbPart.Items.Clear();
+
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Part";
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cmbPart.Items.Add(dr["display_name"]);
+            }
+            con.Close();
         }
     }
 }
