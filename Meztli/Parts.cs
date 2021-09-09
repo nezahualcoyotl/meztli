@@ -28,5 +28,10 @@ namespace Meztli
         {
             this.partTableAdapter.Update(this.meztlidbDataSet.Part);
         }
+
+        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            this.partTableAdapter.Update(this.meztlidbDataSet.Part);
+        }
     }
 }
