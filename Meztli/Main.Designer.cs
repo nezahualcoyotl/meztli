@@ -48,6 +48,7 @@
             this.serialFrom = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.serialTo = new System.Windows.Forms.NumericUpDown();
+            this.btnPartsForm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialTo)).BeginInit();
@@ -205,7 +206,7 @@
             // serialFrom
             // 
             this.serialFrom.Location = new System.Drawing.Point(90, 220);
-            this.serialFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.serialFrom.Margin = new System.Windows.Forms.Padding(2);
             this.serialFrom.Maximum = new decimal(new int[] {
             2000000,
             0,
@@ -237,7 +238,7 @@
             // serialTo
             // 
             this.serialTo.Location = new System.Drawing.Point(266, 220);
-            this.serialTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.serialTo.Margin = new System.Windows.Forms.Padding(2);
             this.serialTo.Maximum = new decimal(new int[] {
             2000001,
             0,
@@ -257,11 +258,22 @@
             0,
             0});
             // 
-            // Form1
+            // btnPartsForm
+            // 
+            this.btnPartsForm.Location = new System.Drawing.Point(25, 12);
+            this.btnPartsForm.Name = "btnPartsForm";
+            this.btnPartsForm.Size = new System.Drawing.Size(75, 23);
+            this.btnPartsForm.TabIndex = 22;
+            this.btnPartsForm.Text = "Partes";
+            this.btnPartsForm.UseVisualStyleBackColor = true;
+            this.btnPartsForm.Click += new System.EventHandler(this.btnPartsForm_Click);
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 594);
+            this.Controls.Add(this.btnPartsForm);
             this.Controls.Add(this.serialTo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.serialFrom);
@@ -284,7 +296,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Meztli 1.2";
             ((System.ComponentModel.ISupportInitialize)(this.pbQRCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialFrom)).EndInit();
@@ -315,6 +327,7 @@
         private System.Windows.Forms.NumericUpDown serialFrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown serialTo;
+        private System.Windows.Forms.Button btnPartsForm;
     }
 }
 

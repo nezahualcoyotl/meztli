@@ -65,5 +65,11 @@ namespace Meztli
 
             return dr.GenerateTag(info, part);
         }
+
+        private void btnPartsForm_Click(object sender, EventArgs e)
+        {
+            Parts partsForm = new Parts();
+            partsForm.Show();
+        }
     }
 }
