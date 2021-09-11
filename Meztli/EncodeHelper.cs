@@ -21,20 +21,20 @@ namespace Meztli
 
         private string EncodeInfo(Information info, Part part)
         {
-            return string.Concat(part.partNumber,Resources.BREAK,
+            return string.Concat(part.number,Resources.BREAK,
                                 Resources.TAESUNG, Resources.BREAK,
-                                part.displayName, Resources.BREAK,
+                                part.name, Resources.BREAK,
                                 (info.date.Year % 100) + "." + info.date.Month.ToString("d2") + "." + info.date.Day);
         }
 
         private string EncodeForMessage(Information info, Part part)
         {
             return string.Concat(Resources.TRIPLE_BREAK +
-                                part.partNumber +
+                                part.number +
                                 Resources.DOUBLE_BREAK +
                                 Resources.TAESUNG +
                                 Resources.DOUBLE_BREAK +
-                                part.displayName +
+                                part.name +
                                 Resources.DOUBLE_BREAK +
                                 (info.date.Year%100) + Resources.BACKSLASH + info.date.Month + Resources.BACKSLASH + info.date.Year);
         }
@@ -45,7 +45,7 @@ namespace Meztli
                 /*Header*/          Resources.HEADER,
                 /*Vendor Code*/     "V" + info.vendorCode,
                 /*Devide*/          Resources.DEVIDE,
-                /*Part Number*/     "P" + part.partNumber,
+                /*Part Number*/     "P" + part.number,
                 /*Devide*/          Resources.DEVIDE,
                 /*ALC Code*/        "S" + string.Empty,
                 /*Devide*/          Resources.DEVIDE,

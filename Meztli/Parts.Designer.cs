@@ -32,22 +32,12 @@
             this.partBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.meztlidbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.meztlidbDataSet = new Meztli.meztlidbDataSet();
-            this.partTableAdapter = new Meztli.meztlidbDataSetTableAdapters.PartTableAdapter();
             this.dgvParts = new System.Windows.Forms.DataGridView();
+            this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.partTableAdapter = new Meztli.meztlidbDataSetTableAdapters.PartTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnumbersalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pngDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.packgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cavDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.displaynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meztlidbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meztlidbDataSet)).BeginInit();
@@ -69,10 +59,6 @@
             this.meztlidbDataSet.DataSetName = "meztlidbDataSet";
             this.meztlidbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // partTableAdapter
-            // 
-            this.partTableAdapter.ClearBeforeFill = true;
-            // 
             // dgvParts
             // 
             this.dgvParts.AutoGenerateColumns = false;
@@ -80,129 +66,15 @@
             this.dgvParts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.numberDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn,
-            this.projectDataGridViewTextBoxColumn,
-            this.partnumberDataGridViewTextBoxColumn,
-            this.partnumbersalesDataGridViewTextBoxColumn,
-            this.partnameDataGridViewTextBoxColumn,
-            this.pngDataGridViewTextBoxColumn,
-            this.pacDataGridViewTextBoxColumn,
-            this.packgDataGridViewTextBoxColumn,
-            this.cavDataGridViewTextBoxColumn,
-            this.equipDataGridViewTextBoxColumn,
-            this.displaynameDataGridViewTextBoxColumn});
+            this.name});
             this.dgvParts.DataSource = this.partBindingSource;
             this.dgvParts.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvParts.Location = new System.Drawing.Point(12, 12);
             this.dgvParts.Name = "dgvParts";
             this.dgvParts.RowHeadersWidth = 62;
-            this.dgvParts.Size = new System.Drawing.Size(1569, 361);
+            this.dgvParts.Size = new System.Drawing.Size(643, 361);
             this.dgvParts.TabIndex = 0;
             this.dgvParts.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // numberDataGridViewTextBoxColumn
-            // 
-            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
-            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
-            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
-            this.numberDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
-            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // projectDataGridViewTextBoxColumn
-            // 
-            this.projectDataGridViewTextBoxColumn.DataPropertyName = "project";
-            this.projectDataGridViewTextBoxColumn.HeaderText = "project";
-            this.projectDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.projectDataGridViewTextBoxColumn.Name = "projectDataGridViewTextBoxColumn";
-            this.projectDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // partnumberDataGridViewTextBoxColumn
-            // 
-            this.partnumberDataGridViewTextBoxColumn.DataPropertyName = "part_number";
-            this.partnumberDataGridViewTextBoxColumn.HeaderText = "part_number";
-            this.partnumberDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.partnumberDataGridViewTextBoxColumn.Name = "partnumberDataGridViewTextBoxColumn";
-            this.partnumberDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // partnumbersalesDataGridViewTextBoxColumn
-            // 
-            this.partnumbersalesDataGridViewTextBoxColumn.DataPropertyName = "part_number_sales";
-            this.partnumbersalesDataGridViewTextBoxColumn.HeaderText = "part_number_sales";
-            this.partnumbersalesDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.partnumbersalesDataGridViewTextBoxColumn.Name = "partnumbersalesDataGridViewTextBoxColumn";
-            this.partnumbersalesDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // partnameDataGridViewTextBoxColumn
-            // 
-            this.partnameDataGridViewTextBoxColumn.DataPropertyName = "part_name";
-            this.partnameDataGridViewTextBoxColumn.HeaderText = "part_name";
-            this.partnameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.partnameDataGridViewTextBoxColumn.Name = "partnameDataGridViewTextBoxColumn";
-            this.partnameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // pngDataGridViewTextBoxColumn
-            // 
-            this.pngDataGridViewTextBoxColumn.DataPropertyName = "png";
-            this.pngDataGridViewTextBoxColumn.HeaderText = "png";
-            this.pngDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.pngDataGridViewTextBoxColumn.Name = "pngDataGridViewTextBoxColumn";
-            this.pngDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // pacDataGridViewTextBoxColumn
-            // 
-            this.pacDataGridViewTextBoxColumn.DataPropertyName = "pac";
-            this.pacDataGridViewTextBoxColumn.HeaderText = "pac";
-            this.pacDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.pacDataGridViewTextBoxColumn.Name = "pacDataGridViewTextBoxColumn";
-            this.pacDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // packgDataGridViewTextBoxColumn
-            // 
-            this.packgDataGridViewTextBoxColumn.DataPropertyName = "pac_kg";
-            this.packgDataGridViewTextBoxColumn.HeaderText = "pac_kg";
-            this.packgDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.packgDataGridViewTextBoxColumn.Name = "packgDataGridViewTextBoxColumn";
-            this.packgDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // cavDataGridViewTextBoxColumn
-            // 
-            this.cavDataGridViewTextBoxColumn.DataPropertyName = "cav";
-            this.cavDataGridViewTextBoxColumn.HeaderText = "cav";
-            this.cavDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.cavDataGridViewTextBoxColumn.Name = "cavDataGridViewTextBoxColumn";
-            this.cavDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // equipDataGridViewTextBoxColumn
-            // 
-            this.equipDataGridViewTextBoxColumn.DataPropertyName = "equip";
-            this.equipDataGridViewTextBoxColumn.HeaderText = "equip";
-            this.equipDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.equipDataGridViewTextBoxColumn.Name = "equipDataGridViewTextBoxColumn";
-            this.equipDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // displaynameDataGridViewTextBoxColumn
-            // 
-            this.displaynameDataGridViewTextBoxColumn.DataPropertyName = "display_name";
-            this.displaynameDataGridViewTextBoxColumn.HeaderText = "display_name";
-            this.displaynameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.displaynameDataGridViewTextBoxColumn.Name = "displaynameDataGridViewTextBoxColumn";
-            this.displaynameDataGridViewTextBoxColumn.Width = 150;
             // 
             // btnSaveChanges
             // 
@@ -214,11 +86,38 @@
             this.btnSaveChanges.UseVisualStyleBackColor = true;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
+            // partTableAdapter
+            // 
+            this.partTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
+            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "name";
+            this.name.Name = "name";
+            // 
             // Parts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1585, 421);
+            this.ClientSize = new System.Drawing.Size(1056, 631);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.dgvParts);
             this.Name = "Parts";
@@ -238,19 +137,9 @@
         private System.Windows.Forms.BindingSource partBindingSource;
         private meztlidbDataSetTableAdapters.PartTableAdapter partTableAdapter;
         private System.Windows.Forms.DataGridView dgvParts;
+        private System.Windows.Forms.Button btnSaveChanges;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partnumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partnumbersalesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pngDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pacDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn packgDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cavDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn equipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn displaynameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnSaveChanges;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
     }
 }

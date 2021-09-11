@@ -84,7 +84,7 @@ namespace Meztli
 
             while (dr.Read())
             {
-                cmbPart.Items.Add(dr["display_name"]);
+                cmbPart.Items.Add(dr["number"]);
             }
             con.Close();
         }
