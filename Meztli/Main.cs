@@ -42,6 +42,9 @@ namespace Meztli
                 dialog.FileName = i.ToString();
                 FinalImage.Save(dialog.FileName + ".bmp");
             }
+
+            string message = "Las etiquetas fueron generadas exitosamente";
+            MessageBox.Show(message);
         }
 
         private Bitmap generateImage(string type, string serialNumber)

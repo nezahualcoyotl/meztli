@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.OleDb;
 
 namespace Meztli
 {
@@ -55,12 +56,22 @@ namespace Meztli
 
         public Part FindPart(string displayName)
         {
-            foreach (KeyValuePair<int, Part> part in Parts)
+            OleDbConnection con;
+            OleDbCommand cmd;
+            OleDbDataReader dr;
+
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Part WHERE display_name='"+displayName+"'";
+            dr = cmd.ExecuteReader();
+            
+            while (dr.Read())
             {
-                if (displayName == part.Value.displayName)
-                {
-                    return part.Value;
-                }
+                Part part = new Part(dr["number"].ToString(), dr["description"].ToString(), dr["project"].ToString(), dr["part_number"].ToString(), dr["part_number_sales"].ToString(), dr["part_name"].ToString(), dr["png"].ToString(), dr["pac"].ToString(), dr["pac_kg"].ToString(), dr["cav"].ToString(), dr["equip"].ToString(), dr["display_name"].ToString());
+                con.Close();
+                return part;
             }
             return null;
         }
