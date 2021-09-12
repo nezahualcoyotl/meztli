@@ -13,7 +13,7 @@ namespace Meztli
         public static string TRIPLE_BREAK = "\n\n\n  ";
         public static string TAESUNG = "TAESUNG";
         public static string BACKSLASH = " / ";
-        public static string SELECCIONELOSCAMPOS = "Seleccione todos los campos.";
+        public static string SELECCIONELOSCAMPOS = "SELECT ALL FIELDS.";
         public static string GENEREELCODIGOPORFAVOR = "Genere el código por favor.";
         public static string IMPRESIONCANCELADA = "Impresión cancelada.";
         public static string FILENAME = "CodigoQR.bmp";

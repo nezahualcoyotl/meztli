@@ -92,12 +92,16 @@
             // 
             // btnSaveChanges
             // 
+            this.btnSaveChanges.BackColor = System.Drawing.Color.Gray;
+            this.btnSaveChanges.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveChanges.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSaveChanges.Location = new System.Drawing.Point(385, 386);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(75, 23);
             this.btnSaveChanges.TabIndex = 1;
-            this.btnSaveChanges.Text = "Save";
-            this.btnSaveChanges.UseVisualStyleBackColor = true;
+            this.btnSaveChanges.Text = "SAVE";
+            this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
             // partTableAdapter
@@ -106,19 +110,23 @@
             // 
             // btnDeleteRows
             // 
+            this.btnDeleteRows.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteRows.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDeleteRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteRows.ForeColor = System.Drawing.Color.Red;
             this.btnDeleteRows.Location = new System.Drawing.Point(12, 386);
             this.btnDeleteRows.Name = "btnDeleteRows";
-            this.btnDeleteRows.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteRows.Size = new System.Drawing.Size(108, 23);
             this.btnDeleteRows.TabIndex = 2;
-            this.btnDeleteRows.Text = "Delete row";
-            this.btnDeleteRows.UseVisualStyleBackColor = true;
+            this.btnDeleteRows.Text = "DELETE ROW";
+            this.btnDeleteRows.UseVisualStyleBackColor = false;
             this.btnDeleteRows.Click += new System.EventHandler(this.btnDeleteRows_Click);
             // 
             // Parts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(472, 421);
             this.Controls.Add(this.btnDeleteRows);
             this.Controls.Add(this.btnSaveChanges);
