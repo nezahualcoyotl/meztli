@@ -33,11 +33,11 @@
             this.meztlidbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.meztlidbDataSet = new Meztli.meztlidbDataSet();
             this.dgvParts = new System.Windows.Forms.DataGridView();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.partTableAdapter = new Meztli.meztlidbDataSetTableAdapters.PartTableAdapter();
             this.btnDeleteRows = new System.Windows.Forms.Button();
-            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meztlidbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meztlidbDataSet)).BeginInit();
@@ -75,6 +75,21 @@
             this.dgvParts.TabIndex = 0;
             this.dgvParts.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "Part number";
+            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Part name";
+            this.name.Name = "name";
+            this.name.Width = 200;
+            // 
             // btnSaveChanges
             // 
             this.btnSaveChanges.Location = new System.Drawing.Point(385, 386);
@@ -91,28 +106,14 @@
             // 
             // btnDeleteRows
             // 
-            this.btnDeleteRows.Location = new System.Drawing.Point(210, 385);
+            this.btnDeleteRows.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteRows.Location = new System.Drawing.Point(12, 386);
             this.btnDeleteRows.Name = "btnDeleteRows";
             this.btnDeleteRows.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteRows.TabIndex = 2;
             this.btnDeleteRows.Text = "Delete row";
             this.btnDeleteRows.UseVisualStyleBackColor = true;
             this.btnDeleteRows.Click += new System.EventHandler(this.btnDeleteRows_Click);
-            // 
-            // numberDataGridViewTextBoxColumn
-            // 
-            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
-            this.numberDataGridViewTextBoxColumn.HeaderText = "Part number";
-            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
-            this.numberDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Part name";
-            this.name.Name = "name";
-            this.name.Width = 200;
             // 
             // Parts
             // 
@@ -123,6 +124,7 @@
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.dgvParts);
             this.Name = "Parts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parts";
             this.Load += new System.EventHandler(this.Parts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
