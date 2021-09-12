@@ -45,6 +45,7 @@
             this.serialTo = new System.Windows.Forms.NumericUpDown();
             this.btnPartsForm = new System.Windows.Forms.Button();
             this.lblTo = new System.Windows.Forms.Label();
+            this.btnVendorCodes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.serialFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialTo)).BeginInit();
             this.SuspendLayout();
@@ -245,12 +246,27 @@
             this.lblTo.TabIndex = 23;
             this.lblTo.Text = "TO";
             // 
+            // btnVendorCodes
+            // 
+            this.btnVendorCodes.BackColor = System.Drawing.Color.Gray;
+            this.btnVendorCodes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVendorCodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendorCodes.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnVendorCodes.Location = new System.Drawing.Point(398, 121);
+            this.btnVendorCodes.Name = "btnVendorCodes";
+            this.btnVendorCodes.Size = new System.Drawing.Size(75, 23);
+            this.btnVendorCodes.TabIndex = 24;
+            this.btnVendorCodes.Text = "V. CODES";
+            this.btnVendorCodes.UseVisualStyleBackColor = false;
+            this.btnVendorCodes.Click += new System.EventHandler(this.btnVendorCodes_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(510, 369);
+            this.Controls.Add(this.btnVendorCodes);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.btnPartsForm);
             this.Controls.Add(this.serialTo);
@@ -298,6 +314,7 @@
         private System.Windows.Forms.NumericUpDown serialTo;
         private System.Windows.Forms.Button btnPartsForm;
         private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.Button btnVendorCodes;
     }
 }
 

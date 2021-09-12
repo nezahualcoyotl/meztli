@@ -86,5 +86,13 @@ namespace Meztli
             }
             con.Close();
         }
+
+        private void btnVendorCodes_Click(object sender, EventArgs e)
+        {
+            VendorCodes vendorCodesForm = new VendorCodes();
+            vendorCodesForm.FormClosing += delegate { this.GoBackToMain(); };
+            vendorCodesForm.Show();
+            this.Hide();
+        }
     }
 }

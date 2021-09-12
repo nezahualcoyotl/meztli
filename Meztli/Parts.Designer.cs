@@ -133,7 +133,7 @@
             this.Controls.Add(this.dgvParts);
             this.Name = "Parts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Parts";
+            this.Text = "PARTS";
             this.Load += new System.EventHandler(this.Parts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.partBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meztlidbDataSetBindingSource)).EndInit();
