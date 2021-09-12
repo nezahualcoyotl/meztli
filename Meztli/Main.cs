@@ -17,6 +17,7 @@ namespace Meztli
         {
             InitializeComponent();
             LoadParts();
+            LoadVendorCodes();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -67,6 +68,7 @@ namespace Meztli
         {
             this.Show();
             LoadParts();
+            LoadVendorCodes();
         }
 
         private void LoadParts()
@@ -83,6 +85,24 @@ namespace Meztli
             while (dr.Read())
             {
                 cmbPart.Items.Add(dr["number"]);
+            }
+            con.Close();
+        }
+
+        private void LoadVendorCodes()
+        {
+            cmbVendorCode.Items.Clear();
+
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Vendor";
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cmbVendorCode.Items.Add(dr["code"]);
             }
             con.Close();
         }
