@@ -33,5 +33,14 @@ namespace Meztli
         {
             this.partTableAdapter.Update(this.meztlidbDataSet.Part);
         }
+
+        private void btnDeleteRows_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in this.dgvParts.SelectedRows)
+            {
+                if(item.DataBoundItem != null)
+                    dgvParts.Rows.RemoveAt(item.Index);
+            }
+        }
     }
 }
