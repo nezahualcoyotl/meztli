@@ -25,8 +25,7 @@ namespace Meztli
             
             if(cmbPart.SelectedItem == null ||
                 cmbVendorCode.SelectedItem == null ||
-                cmbShift.SelectedItem == null ||
-                cmbSerialNumber.SelectedItem == null)
+                cmbShift.SelectedItem == null)
             {
                 lblWarning.Text = Resources.SELECCIONELOSCAMPOS;
                 return;
