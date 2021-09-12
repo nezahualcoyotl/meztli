@@ -153,7 +153,7 @@
             this.lblWarning.Margin = new System.Windows.Forms.Padding(3);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.lblWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblWarning.Size = new System.Drawing.Size(0, 19);
             this.lblWarning.TabIndex = 14;
             // 
             // label1
@@ -252,7 +252,7 @@
             this.btnVendorCodes.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnVendorCodes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendorCodes.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnVendorCodes.Location = new System.Drawing.Point(398, 121);
+            this.btnVendorCodes.Location = new System.Drawing.Point(398, 123);
             this.btnVendorCodes.Name = "btnVendorCodes";
             this.btnVendorCodes.Size = new System.Drawing.Size(75, 23);
             this.btnVendorCodes.TabIndex = 24;
