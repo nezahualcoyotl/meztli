@@ -26,21 +26,33 @@ namespace Meztli
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            this.partTableAdapter.Update(this.meztlidbDataSet.Part);
+            saveDataGridViewChanges();
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            this.partTableAdapter.Update(this.meztlidbDataSet.Part);
+            saveDataGridViewChanges();
         }
 
         private void btnDeleteRows_Click(object sender, EventArgs e)
         {
+            if(this.dgvParts.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Select at least one row to delete");
+                return;
+            }
+
             foreach (DataGridViewRow item in this.dgvParts.SelectedRows)
             {
                 if(item.DataBoundItem != null)
                     dgvParts.Rows.RemoveAt(item.Index);
             }
+            saveDataGridViewChanges();
+        }
+
+        private void saveDataGridViewChanges()
+        {
+            this.partTableAdapter.Update(this.meztlidbDataSet.Part);
         }
     }
 }
