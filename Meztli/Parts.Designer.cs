@@ -113,7 +113,7 @@
             this.btnDeleteRows.BackColor = System.Drawing.Color.Gray;
             this.btnDeleteRows.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDeleteRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteRows.ForeColor = System.Drawing.Color.Red;
+            this.btnDeleteRows.ForeColor = System.Drawing.Color.Crimson;
             this.btnDeleteRows.Location = new System.Drawing.Point(12, 386);
             this.btnDeleteRows.Name = "btnDeleteRows";
             this.btnDeleteRows.Size = new System.Drawing.Size(108, 23);
