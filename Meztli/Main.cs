@@ -40,17 +40,22 @@ namespace Meztli
 
             if (loc == "default")
             {
-                updt = new OleDbCommand();
-                con.Open();
-                updt.Connection = con;
-                updt.CommandText = "UPDATE Settings SET val='" + System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "' WHERE parameter='dump_folder'";
-                updt.ExecuteNonQuery();
-                con.Close();
+                UpdateDumpFolder(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
                 VerifyDefaultLocation();
             } else {
                 lnkDumpFolder.Tag = loc;
                 lnkDumpFolder.Text = loc;
             }
+        }
+
+        private void UpdateDumpFolder(string location)
+        {
+            updt = new OleDbCommand();
+            con.Open();
+            updt.Connection = con;
+            updt.CommandText = "UPDATE Settings SET val='" + location + "' WHERE parameter='dump_folder'";
+            updt.ExecuteNonQuery();
+            con.Close();
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -167,9 +172,17 @@ namespace Meztli
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.IO.Directory.CreateDirectory("test");
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
 
-            MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    UpdateDumpFolder(fbd.SelectedPath);
+                    MessageBox.Show("Dump folder updated to " + fbd.SelectedPath);
+                    VerifyDefaultLocation();
+                }
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

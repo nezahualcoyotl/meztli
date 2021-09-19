@@ -49,7 +49,7 @@
             this.lblNemeSys = new System.Windows.Forms.Label();
             this.lblPartDesc = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnChangeLoc = new System.Windows.Forms.Button();
             this.lnkDumpFolder = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.serialFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialTo)).BeginInit();
@@ -295,19 +295,19 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "DUMP FOLDER:";
             // 
-            // button2
+            // btnChangeLoc
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(398, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "CHANGE";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnChangeLoc.BackColor = System.Drawing.Color.Gray;
+            this.btnChangeLoc.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnChangeLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeLoc.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnChangeLoc.Location = new System.Drawing.Point(398, 273);
+            this.btnChangeLoc.Name = "btnChangeLoc";
+            this.btnChangeLoc.Size = new System.Drawing.Size(75, 23);
+            this.btnChangeLoc.TabIndex = 30;
+            this.btnChangeLoc.Text = "CHANGE";
+            this.btnChangeLoc.UseVisualStyleBackColor = false;
+            this.btnChangeLoc.Click += new System.EventHandler(this.button2_Click);
             // 
             // lnkDumpFolder
             // 
@@ -328,7 +328,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(510, 414);
             this.Controls.Add(this.lnkDumpFolder);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnChangeLoc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPartDesc);
             this.Controls.Add(this.lblNemeSys);
@@ -384,7 +384,7 @@
         private System.Windows.Forms.Label lblNemeSys;
         private System.Windows.Forms.Label lblPartDesc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnChangeLoc;
         private System.Windows.Forms.LinkLabel lnkDumpFolder;
     }
 }
