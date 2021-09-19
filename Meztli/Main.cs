@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using System.Drawing.Imaging;
 using System.Data.OleDb;
+using System.Reflection;
+using System.Diagnostics;
 
 namespace Meztli
 {
@@ -11,6 +13,7 @@ namespace Meztli
     {
         OleDbConnection con;
         OleDbCommand cmd;
+        OleDbCommand updt;
         OleDbDataReader dr;
 
         public Main()
@@ -18,13 +21,43 @@ namespace Meztli
             InitializeComponent();
             LoadParts();
             LoadVendorCodes();
+
+            VerifyDefaultLocation();
+        }
+
+        private void VerifyDefaultLocation()
+        {
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Settings WHERE parameter='dump_folder'";
+            dr = cmd.ExecuteReader();
+
+            dr.Read();
+            string loc = dr["val"].ToString();
+            con.Close();
+
+            if (loc == "default")
+            {
+                updt = new OleDbCommand();
+                con.Open();
+                updt.Connection = con;
+                updt.CommandText = "UPDATE Settings SET val='" + System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "' WHERE parameter='dump_folder'";
+                updt.ExecuteNonQuery();
+                con.Close();
+                VerifyDefaultLocation();
+            } else {
+                lnkDumpFolder.Tag = loc;
+                lnkDumpFolder.Text = loc;
+            }
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             lblWarning.Text = string.Empty;
-            
-            if(cmbPart.SelectedItem == null ||
+
+            if (cmbPart.SelectedItem == null ||
                 cmbVendorCode.SelectedItem == null ||
                 cmbShift.SelectedItem == null)
             {
@@ -113,6 +146,35 @@ namespace Meztli
             vendorCodesForm.FormClosing += delegate { this.GoBackToMain(); };
             vendorCodesForm.Show();
             this.Hide();
+        }
+
+        private void cmbPartChanged(object sender, EventArgs e)
+        {
+            string value = ((ComboBox)sender).SelectedItem.ToString();
+            con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
+            cmd = new OleDbCommand();
+            con.Open();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM Part WHERE number='"+ value + "'";
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                lblPartDesc.Text = dr["name"].ToString();
+            }
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.IO.Directory.CreateDirectory("test");
+
+            MessageBox.Show(System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location));
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("explorer.exe", lnkDumpFolder.Tag.ToString());
         }
     }
 }
