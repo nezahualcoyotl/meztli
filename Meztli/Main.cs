@@ -25,7 +25,7 @@ namespace Meztli
             VerifyDefaultLocation();
         }
 
-        private void VerifyDefaultLocation()
+        private string GetCurrentLocation()
         {
             con = new OleDbConnection("Provider=Microsoft.ACE.Oledb.12.0;Data Source=meztlidb.accdb");
             cmd = new OleDbCommand();
@@ -35,8 +35,16 @@ namespace Meztli
             dr = cmd.ExecuteReader();
 
             dr.Read();
-            string loc = dr["val"].ToString();
+
+            string location = dr["val"].ToString();
             con.Close();
+
+            return location;
+        }
+
+        private void VerifyDefaultLocation()
+        {
+            string loc = GetCurrentLocation();
 
             if (loc == "default")
             {
@@ -72,12 +80,16 @@ namespace Meztli
 
             int initialSerial = Convert.ToInt32(serialFrom.Value);
             int finalSerial = Convert.ToInt32(serialTo.Value);
+            string destinyLocation = GetCurrentLocation() + "\\" + dtpDate.Value.ToString("MM-dd-yyyy") + "_" + cmbPart.Text;
+
+            System.IO.Directory.CreateDirectory(destinyLocation);
+
             for (int i = initialSerial; i <= finalSerial; i++)
             {
                 Bitmap FinalImage = generateImage(Resources.GENERATEFORSAVE, i.ToString());
 
                 SaveFileDialog dialog = new SaveFileDialog();
-                dialog.FileName = i.ToString();
+                dialog.FileName = destinyLocation + "\\" + i.ToString();
                 FinalImage.Save(dialog.FileName + ".bmp");
             }
 
