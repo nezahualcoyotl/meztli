@@ -48,9 +48,12 @@
             this.btnVendorCodes = new System.Windows.Forms.Button();
             this.lblNemeSys = new System.Windows.Forms.Label();
             this.lblPartDesc = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDumpFolder = new System.Windows.Forms.Label();
             this.btnChangeLoc = new System.Windows.Forms.Button();
             this.lnkDumpFolder = new System.Windows.Forms.LinkLabel();
+            this.lblSettings = new System.Windows.Forms.Label();
+            this.lblFirstDivider = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.serialFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serialTo)).BeginInit();
             this.SuspendLayout();
@@ -141,7 +144,7 @@
             this.btnGenerate.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerate.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGenerate.Location = new System.Drawing.Point(145, 311);
+            this.btnGenerate.Location = new System.Drawing.Point(149, 276);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(214, 47);
             this.btnGenerate.TabIndex = 12;
@@ -155,7 +158,7 @@
             this.lblWarning.BackColor = System.Drawing.Color.Crimson;
             this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWarning.ForeColor = System.Drawing.Color.Snow;
-            this.lblWarning.Location = new System.Drawing.Point(185, 373);
+            this.lblWarning.Location = new System.Drawing.Point(189, 338);
             this.lblWarning.Margin = new System.Windows.Forms.Padding(3);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
@@ -270,7 +273,7 @@
             // 
             this.lblNemeSys.AutoSize = true;
             this.lblNemeSys.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNemeSys.Location = new System.Drawing.Point(407, 392);
+            this.lblNemeSys.Location = new System.Drawing.Point(407, 538);
             this.lblNemeSys.Name = "lblNemeSys";
             this.lblNemeSys.Size = new System.Drawing.Size(91, 13);
             this.lblNemeSys.TabIndex = 25;
@@ -285,15 +288,15 @@
             this.lblPartDesc.Size = new System.Drawing.Size(0, 13);
             this.lblPartDesc.TabIndex = 27;
             // 
-            // label1
+            // lblDumpFolder
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(23, 278);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "DUMP FOLDER:";
+            this.lblDumpFolder.AutoSize = true;
+            this.lblDumpFolder.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblDumpFolder.Location = new System.Drawing.Point(23, 437);
+            this.lblDumpFolder.Name = "lblDumpFolder";
+            this.lblDumpFolder.Size = new System.Drawing.Size(88, 13);
+            this.lblDumpFolder.TabIndex = 29;
+            this.lblDumpFolder.Text = "DUMP FOLDER:";
             // 
             // btnChangeLoc
             // 
@@ -301,7 +304,7 @@
             this.btnChangeLoc.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnChangeLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeLoc.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnChangeLoc.Location = new System.Drawing.Point(398, 273);
+            this.btnChangeLoc.Location = new System.Drawing.Point(398, 432);
             this.btnChangeLoc.Name = "btnChangeLoc";
             this.btnChangeLoc.Size = new System.Drawing.Size(75, 23);
             this.btnChangeLoc.TabIndex = 30;
@@ -313,7 +316,7 @@
             // 
             this.lnkDumpFolder.AutoSize = true;
             this.lnkDumpFolder.LinkColor = System.Drawing.Color.Aqua;
-            this.lnkDumpFolder.Location = new System.Drawing.Point(119, 278);
+            this.lnkDumpFolder.Location = new System.Drawing.Point(119, 437);
             this.lnkDumpFolder.Name = "lnkDumpFolder";
             this.lnkDumpFolder.Size = new System.Drawing.Size(83, 13);
             this.lnkDumpFolder.TabIndex = 31;
@@ -321,15 +324,44 @@
             this.lnkDumpFolder.Text = "Dump folder link";
             this.lnkDumpFolder.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lblSettings
+            // 
+            this.lblSettings.AutoSize = true;
+            this.lblSettings.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblSettings.Location = new System.Drawing.Point(226, 385);
+            this.lblSettings.Name = "lblSettings";
+            this.lblSettings.Size = new System.Drawing.Size(61, 13);
+            this.lblSettings.TabIndex = 32;
+            this.lblSettings.Text = "SETTINGS";
+            // 
+            // lblFirstDivider
+            // 
+            this.lblFirstDivider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFirstDivider.Location = new System.Drawing.Point(12, 392);
+            this.lblFirstDivider.Name = "lblFirstDivider";
+            this.lblFirstDivider.Size = new System.Drawing.Size(194, 2);
+            this.lblFirstDivider.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(304, 392);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 2);
+            this.label1.TabIndex = 34;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(510, 414);
+            this.ClientSize = new System.Drawing.Size(510, 560);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFirstDivider);
+            this.Controls.Add(this.lblSettings);
             this.Controls.Add(this.lnkDumpFolder);
             this.Controls.Add(this.btnChangeLoc);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDumpFolder);
             this.Controls.Add(this.lblPartDesc);
             this.Controls.Add(this.lblNemeSys);
             this.Controls.Add(this.btnVendorCodes);
@@ -383,9 +415,12 @@
         private System.Windows.Forms.Button btnVendorCodes;
         private System.Windows.Forms.Label lblNemeSys;
         private System.Windows.Forms.Label lblPartDesc;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDumpFolder;
         private System.Windows.Forms.Button btnChangeLoc;
         private System.Windows.Forms.LinkLabel lnkDumpFolder;
+        private System.Windows.Forms.Label lblSettings;
+        private System.Windows.Forms.Label lblFirstDivider;
+        private System.Windows.Forms.Label label1;
     }
 }
 
