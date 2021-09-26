@@ -273,7 +273,7 @@
             // 
             this.lblNemeSys.AutoSize = true;
             this.lblNemeSys.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNemeSys.Location = new System.Drawing.Point(407, 538);
+            this.lblNemeSys.Location = new System.Drawing.Point(407, 481);
             this.lblNemeSys.Name = "lblNemeSys";
             this.lblNemeSys.Size = new System.Drawing.Size(91, 13);
             this.lblNemeSys.TabIndex = 25;
@@ -355,7 +355,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(510, 560);
+            this.ClientSize = new System.Drawing.Size(510, 503);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFirstDivider);
             this.Controls.Add(this.lblSettings);

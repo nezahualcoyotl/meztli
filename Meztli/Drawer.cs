@@ -47,7 +47,7 @@ namespace Meztli
             //Rectangle where information will be displayed
             RectangleF stringRect = new RectangleF(10, 15, 200, 180);
             //Font information
-            Font font = new Font("Impact", 26, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            Font font = new Font("Calibri", 26, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
 
             //Create empty sticker bitmap
             Bitmap image = new Bitmap(size.X, size.Y);
